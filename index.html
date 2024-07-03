@@ -1,7 +1,7 @@
 
-<html lang="zh-CN">
+<html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
@@ -9,10 +9,10 @@
     <a-scene mindar-image="imageTargetSrc: ./res/targets2.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       
-      <a-entity mindar-image-target="targetIndex: 0" position="0 1 0"
-            text="anchor: center; width: 1.5; font: custom-msdf.json; color: white; value: 我是第一个纹饰">
-      </a-entity>
-      
+      <a-entity mindar-image-target="targetIndex: 0" position="0 1 0">
+        <a-text value = "ABCあいうえお日本語" font = "custom-msdf.json" font-image = "custom-msdf.png" negate = "false" scale = "2 2 1" position = "0 0 0" > </ a-text >
+      </a-entity>     
+
       <a-entity mindar-image-target="targetIndex: 1">
         <a-plane color="red" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
