@@ -8,87 +8,17 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./res/targets.mind; filterMinCF:0.0001; filterBeta: 10" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-            <!--
-        Label a box (centered).
-        FIXME: box needs to be super thin or else text will be inside the box hidden by walls.
-      -->
-      <a-box opacity="0.1" color="blue" width="1" height="1" depth="0.001"
-             position="0 1.5 -1.5"
-             text="align: center; color: black; value: (Centered) default\n(roboto) font\nwith line break">
-
-        <!-- Reference marks, so we can see where the label is aligning.  -->
-        <a-entity mixin="marker" position="-0.5 0 0"></a-entity>
-        <a-entity mixin="marker" position="-0.25 0 0"></a-entity>
-        <a-entity mixin="marker" position="0 0 0"></a-entity>
-        <a-entity mixin="marker" position="0.25 0 0"></a-entity>
-        <a-entity mixin="marker" position="0.5 0 0"></a-entity>
-
-        <!--
-          Label the top of the box,
-          positioning the entity at the center of the top,
-          and using baseline "top" to align top of text with entity position.
-          NOTE: attribute collision makes the text property text-text
-        -->
-        <a-text color="red" align="center" baseline="top" width="1" position="0 0.5 0"
-                font="aileronsemibold"
-                value="Top of box\n(even when multi-line)\naileronsemibold font" ></a-text>
-
-        <!--
-          Label the bottom of the box,
-          positioning the entity at the center of the bottom,
-          and using baseline "bottom" to align bottom of text with entity position.
-          NOTE: attribute collision makes the text property text-text
-        -->
-        <a-text color="red" align="center" baseline="bottom" width="1" position="0 -0.5 0"
-                value="Bottom of box\n(even when multi-line)" ></a-text>
-
-        <!--
-          Label the left of the box,
-          positioning the entity at the center of the left,
-          and using align "left" to align left of text with entity position.
-          NOTE: attribute collision makes the text property text-text
-        -->
-        <a-text color="red" align="left" baseline="center" width="1" position="-0.5 0 0"
-                value="Left\nof box\n(even\nwhen\nmulti-\nline)"></a-text>
-
-        <!--
-          Label the right of the box,
-          positioning the entity at the center of the right,
-          and using align "right" to align right of text with entity position.
-          NOTE: attribute collision makes the text property text-text
-        -->
-        <a-text color="red" align="right" baseline="center" width="1" position="0.5 0 0"
-                value="Right\nof box\n(even\nwhen\nmulti-\nline)"></a-text>
-      </a-box>
-      <a-plane rotation="-90 0 0" width="1" height="1" position="0 1 -1"
-               text="baseline: bottom; font: kelsonsans; color: black; value:
-                     kelsonsans font
-                     align default (left)
-                     baseline bottom"
-               text__2="baseline: top; align: right; font: kelsonsans; color: black; value:
-                        kelsonsans font
-                        align right
-                        baseline top"
-               text__3="baseline: center; align: center; font: kelsonsans; color: black; value:
-                        kelsonsans font
-                        align center
-                        baseline center">
-        <!-- Reference marks, so we can see where the label is aligning. -->
-        <a-entity mixin="marker" position="-0.5 0 0"></a-entity>
-        <a-entity mixin="marker" position="-0.25 0 0"></a-entity>
-        <a-entity mixin="marker" position="0 0 0"></a-entity>
-        <a-entity mixin="marker" position="0.25 0 0"></a-entity>
-        <a-entity mixin="marker" position="0.5 0 0"></a-entity>
-      </a-plane>
-        <!--
+      
+      <a-entity mindar-image-target="targetIndex: 0" position="0 0 0">
         <a-text 
           value="青花纹"
           font="qhw-msdf.json"
           color="#243779"
+          rotation="0 0 90"
+          scale="2 2 2"
+          width="3"
           negate="false">
         </a-text>
-        -->
-
       </a-entity>     
 
       <a-entity mindar-image-target="targetIndex: 1" position="0 0 0">
@@ -96,6 +26,9 @@
           value="宝相纹"
           font="bxw-msdf.json"
           color="#5C313A"
+          rotation="0 0 90"
+          scale="2 2 2"
+          width="3"
           negate="false">
         </a-text>
       </a-entity>
